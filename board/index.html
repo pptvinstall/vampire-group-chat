@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vampire Group Chat Ep 1 Shot Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a production slate up top, then a stripboard. Scene strips carry the
+   stripboard colors (day/night, interior/exterior); everything else stays quiet. */
+:root {
+  --paper: #eceaf0;
+  --card: #f8f7fa;
+  --ink: #1d1622;
+  --muted: #655c6e;
+  --line: #d2ccd9;
+  --accent: #8a1c2c;
+  --accent-ink: #ffffff;
+  --gold: #9a6c14;
+  --ok: #1f7a4d;
+  --strip-ext-day: #f0cf45;
+  --strip-int-day: #ffffff;
+  --strip-int-night: #86a9dc;
+  --strip-ext-night: #7cc191;
+  --strip-ink: #1d1622;
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17121b;
+    --card: #221b27;
+    --ink: #f0eaf3;
+    --muted: #a99fb3;
+    --line: #3b3143;
+    --accent: #e4667a;
+    --accent-ink: #1d0b10;
+    --gold: #e2b65c;
+    --ok: #6fd3a0;
+    --strip-ext-day: #d9b93a;
+    --strip-int-day: #e9e4ee;
+    --strip-int-night: #7397cc;
+    --strip-ext-night: #68ad7e;
+    --strip-ink: #17121b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17121b;
+  --card: #221b27;
+  --ink: #f0eaf3;
+  --muted: #a99fb3;
+  --line: #3b3143;
+  --accent: #e4667a;
+  --accent-ink: #1d0b10;
+  --gold: #e2b65c;
+  --ok: #6fd3a0;
+  --strip-ext-day: #d9b93a;
+  --strip-int-day: #e9e4ee;
+  --strip-int-night: #7397cc;
+  --strip-ext-night: #68ad7e;
+  --strip-ink: #17121b;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+main { max-width: 1080px; margin: 0 auto; padding: 20px 16px 80px; display: flex; flex-direction: column; gap: 40px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: 0.01em; }
+h2 { font-size: 34px; font-weight: 800; text-transform: uppercase; line-height: 1; }
+h3 { font-size: 22px; font-weight: 800; text-transform: uppercase; line-height: 1.05; }
+p { margin: 0; max-width: 68ch; }
+.lede { color: var(--muted); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+section { display: flex; flex-direction: column; gap: 16px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- slate ---------- */
+.slate { border: 2px solid var(--ink); background: var(--card); }
+.clapper {
+  height: 26px;
+  background: repeating-linear-gradient(-55deg, var(--ink) 0 26px, var(--card) 26px 52px);
+  border-bottom: 2px solid var(--ink);
+}
+.slate-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 16px; }
+.slate h1 { font-size: clamp(44px, 10vw, 96px); font-weight: 900; line-height: 0.9; text-transform: uppercase; }
+.slate h1 span { color: var(--accent); }
+.slate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); border-top: 2px solid var(--ink); border-left: 2px solid var(--ink); }
+.slate-cell { border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; }
+.slate-cell b { font-family: var(--font-display); font-size: 26px; font-weight: 800; line-height: 1; }
+.meters { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.meter { display: flex; flex-direction: column; gap: 6px; }
+.meter-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 14px; }
+.bar { height: 10px; border: 1.5px solid var(--ink); background: var(--paper); }
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.25s ease; }
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+
+/* ---------- jump bar ---------- */
+.jump { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1.5px solid var(--line); margin: -20px -16px 0; padding: 8px 16px; overflow-x: auto; display: flex; gap: 6px; }
+.jump button { flex: none; font: 500 13px var(--font-mono); padding: 6px 10px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; border-radius: 2px; }
+.jump button:hover { border-color: var(--ink); }
+
+/* ---------- buttons ---------- */
+.copy { font: 600 14px var(--font-body); padding: 8px 12px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; border-radius: 2px; white-space: nowrap; }
+.copy:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.copy.done { background: var(--ok); border-color: var(--ok); color: var(--paper); }
+.copy.flow { background: transparent; color: var(--ink); }
+.copy.flow:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.copy.flow.done { background: var(--ok); border-color: var(--ok); color: var(--paper); }
+button:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.okbox { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; cursor: pointer; white-space: nowrap; }
+.okbox input { width: 18px; height: 18px; accent-color: var(--ok); margin: 0; }
+
+details.prompt { width: 100%; }
+details.prompt summary { cursor: pointer; font: 500 12px var(--font-mono); color: var(--muted); padding: 4px 0; }
+details.prompt pre { margin: 6px 0 0; padding: 12px; background: var(--paper); border: 1.5px solid var(--line); font: 400 12.5px/1.55 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 340px; overflow-y: auto; }
+
+/* ---------- team ---------- */
+.team { display: grid; gap: 0; border-top: 1.5px solid var(--ink); }
+.player { display: grid; grid-template-columns: 150px 130px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1.5px solid var(--line); align-items: start; }
+.player b { font-family: var(--font-display); font-size: 22px; font-weight: 800; text-transform: uppercase; line-height: 1.05; }
+.player .role { font: 500 12px var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); padding-top: 5px; }
+.player small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+@media (max-width: 640px) { .player { grid-template-columns: 1fr; gap: 2px; } .player .role { padding-top: 0; } }
+
+/* ---------- test ---------- */
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; border-top: 1.5px solid var(--ink); counter-reset: step; }
+.steps > li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1.5px solid var(--line); }
+.steps > li::before { content: counter(step); font-family: var(--font-display); font-weight: 900; font-size: 40px; line-height: 0.9; color: var(--accent); }
+.step-body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.passbar { border: 1.5px solid var(--gold); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.passbar ul { margin: 0; padding-left: 18px; }
+
+/* ---------- cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.card { background: var(--card); border: 1.5px solid var(--line); padding: 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.card.is-ok { border-color: var(--ok); }
+.card-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.sid { font-family: var(--font-display); font-weight: 900; font-size: 30px; line-height: 0.9; }
+.chip { font: 500 11px var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 6px; border: 1.5px solid var(--line); border-radius: 2px; color: var(--muted); }
+.chip.test { border-color: var(--gold); color: var(--gold); }
+.chip.edit { border-color: var(--accent); color: var(--accent); }
+.card p { font-size: 14.5px; }
+.card .who { font-weight: 600; }
+.card-foot { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-top: auto; }
+
+/* ---------- stripboard ---------- */
+.legend { display: flex; flex-wrap: wrap; gap: 8px; }
+.legend span { font: 500 11px var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; color: var(--strip-ink); border: 1.5px solid var(--ink); }
+.ext-day { background: var(--strip-ext-day); }
+.int-day { background: var(--strip-int-day); }
+.int-night { background: var(--strip-int-night); }
+.ext-night { background: var(--strip-ext-night); }
+.scene { display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 60px; }
+.strip { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 8px 12px; color: var(--strip-ink); border: 2px solid var(--ink); }
+.strip .num { font-family: var(--font-display); font-weight: 900; font-size: 44px; line-height: 0.85; }
+.strip .ttl { font-family: var(--font-display); font-weight: 800; font-size: 24px; text-transform: uppercase; line-height: 1; }
+.strip .meta { font: 500 12px var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; }
+.strip .tc { font: 500 13px var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+.sub { font: 500 12px var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.cuts { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--ink); }
+.cuts li { display: grid; grid-template-columns: 34px 78px 1fr auto; gap: 10px; padding: 10px 0; border-bottom: 1.5px solid var(--line); align-items: start; }
+.cuts .n { font: 500 12px var(--font-mono); color: var(--muted); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.cuts .cid { font-family: var(--font-display); font-weight: 800; font-size: 20px; line-height: 1.1; }
+.cuts .what { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.cuts .line { font-size: 15.5px; }
+.cuts .line b { font-weight: 700; }
+.cuts .act { font-size: 13.5px; color: var(--muted); }
+.cuts .ctl { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+.cuts li.is-ok .cid { color: var(--ok); }
+@media (max-width: 640px) {
+  .cuts li { grid-template-columns: 28px 1fr; }
+  .cuts .what, .cuts .ctl { grid-column: 2; }
+  .cuts .ctl { flex-direction: row; align-items: center; flex-wrap: wrap; }
+  .strip { grid-template-columns: auto 1fr; }
+  .strip .tc { grid-column: 2; text-align: left; }
+}
+
+/* ---------- tables ---------- */
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1.5px solid var(--line); font-size: 15px; }
+th { font: 500 12px var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); border-bottom: 1.5px solid var(--ink); }
+td.num, th.num { text-align: right; }
+
+.cues { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.calls { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 12px; }
+.calls .card ol { margin: 0; padding-left: 22px; font-size: 14.5px; display: flex; flex-direction: column; gap: 4px; }
+.calls .card ol { list-style: upper-alpha; }
+.made { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; max-width: 72ch; }
+
+.toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 10px 16px; font: 500 14px var(--font-body); border-radius: 2px; opacity: 0; pointer-events: none; transition: opacity 0.2s; max-width: calc(100% - 32px); text-align: center; }
+.toast.show { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
+
+</style>
+</head>
+<body>
+<main id="app"></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+// THE VAMPIRE GROUP CHAT — S1E1 "New Blood, Who Dis?" — V7 script / V9 cast
+// Shot breakdown: stills (camera setups) and clips in cut order.
+const BOARD = {
+  chars: {
+    E: {
+      name: "Eiesha",
+      look: "Black teen girl, warm brown eyes, long neat braids with gold cuffs, burgundy-and-mustard sweater, light denim jeans, white sneakers. Guarded, dry, quick-witted.",
+      voice: "warm young Black woman, a little weary, dry and smart, natural pace"
+    },
+    B: {
+      name: "Bianca",
+      look: "East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.",
+      voice: "Atlanta-raised young woman, quick understated sarcasm, concern under the jokes, no put-on accent"
+    },
+    S: {
+      name: "Stefon",
+      look: "V9 FINAL. Young-looking Black teen male, close Caesar cut with 360 waves, slim gold-wire glasses, clean-shaven, strong brow, broad shoulders, blue-gray casual overshirt open over a white crewneck T-shirt, dark pants, gray-and-white sneakers.",
+      voice: "restrained, reflective young Black man, lower-mid register, articulate, old-soul serious",
+      lock: "Stefon stays a Black teen with waves and wire glasses, clean-shaven. No beard, no turtleneck, no trench coat, no green coat, no leather. He is not Daymondre."
+    },
+    D: {
+      name: "Daymondre",
+      look: "Black man, Stefon's older brother with a clearly different face, short curly taper, goatee, black leather jacket, thick gold bat pendant on a chain, smug half-smile.",
+      voice: "smooth low-mid Black male voice, cocky and playful, can turn cold without shouting",
+      lock: "Daymondre is the only person in leather and the only one with the gold bat pendant. He and Stefon are brothers, never twins."
+    },
+    M: {
+      name: "Marquell",
+      look: "V9 FINAL. Mature-looking late-teen Latino quarterback, curly dark hair, freckles, subtle goatee, athletic build, Creekside Grill dark polo with a burgundy work apron. No varsity jacket.",
+      voice: "grounded late-teen Latino athlete, warm, protective, no exaggerated accent"
+    },
+    V: {
+      name: "Vanesha",
+      look: "Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.",
+      voice: "confident adult Latina, quick and warm, direct, a little vulnerability under the bravado"
+    }
+  },
+
+  // Cast sheets, made in ChatGPT one at a time. Daymondre goes first and becomes the style anchor.
+  sheets: [
+    { k: "D", ref: "Daymondre_V9_sheet.png",
+      outfit: "Black leather jacket over a black top, thick gold chain with a gold bat pendant, black pants, black boots.",
+      faces: "smug half-smile, amused grin, bored shrug, cold stare, delighted",
+      extra: "One extra head close-up at the far right of the bottom row: his vampire face. Exact same face and goatee, with red-amber irises, faint dark veins under both eyes and two small fangs. No blood.",
+      drop: "Drop the toothpick from the old reference." },
+    { k: "S", ref: "Stefon_V9_sheet.png",
+      outfit: "Blue-gray casual overshirt, open, over a white crewneck T-shirt. Dark pants. Gray-and-white sneakers. Slim gold-wire glasses in every panel.",
+      faces: "calm and unblinking, awkward half-smile, quiet anger, caught and guilty, worried",
+      drop: "No vampire panel for Stefon. The old reference is close to photoreal; keep the identity, not the rendering." },
+    { k: "E", ref: "Eiesha_V9_face_only.jpg",
+      outfit: "Burgundy-and-mustard sweater, light denim jeans, white sneakers, small gold hoop earrings, a backpack on one shoulder in the full-body view.",
+      faces: "guarded, dry smirk, small real smile, startled, afraid",
+      drop: "The reference shows only her face and braids. It is more cartoon than our look: keep her identity and the braids with gold cuffs, but give her the same grounded proportions and eye size as the Daymondre sheet." },
+    { k: "B", ref: "Bianca_V9_sheet.png",
+      outfit: "Olive jacket over a dark top, crystal pendant necklace, dark cargo pants, white sneakers. Long dark hair with purple highlights.",
+      faces: "deadpan, slow side-eye, suspicious squint, amused, alarmed",
+      drop: "No magic effects and no glowing hands. The old reference is close to photoreal; keep the identity, not the rendering." },
+    { k: "M", ref: "Marquell_V9_sheet.png",
+      outfit: "His Creekside Grill work look is the only outfit: dark polo shirt (blank, no logo), burgundy work apron, dark pants, white sneakers. No varsity jacket, no football uniform.",
+      faces: "hopeful grin, innocent and literal, flustered, sincere, scared but steady",
+      drop: "Use the old reference for his face, curls, freckles, subtle goatee and build only. The old reference is close to photoreal; keep the identity, not the rendering." },
+    { k: "V", ref: "Vanesha_V9_sheet.png",
+      outfit: "Black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, gold hoop earrings.",
+      faces: "busy and unbothered, amused, irritated, startled, shaken",
+      drop: "No attack-aftermath panel. She and Marquell are siblings: family resemblance, not the same face. The old reference is close to photoreal; keep the identity, not the rendering." }
+  ],
+
+  plates: [
+    { id: "L1", name: "School exterior, morning",
+      desc: "Shadow Creek High: an upscale brick-and-glass suburban high school entrance outside Atlanta. Wide front steps, Georgia pines and crepe myrtles, soft gold early-morning light. A few blurred, faceless students far in the background. A blank sign panel above the doors with no lettering.",
+      tone: "morning school ambience, birds, distant voices" },
+    { id: "L2", name: "School hallway, morning",
+      desc: "The main hallway of the same school: navy-blue lockers with thin gold trim along the left wall, polished pale floor, tall windows along the right wall throwing soft gold morning light. Blurred, faceless students in the far background.",
+      tone: "school hallway ambience, locker doors, distant chatter" },
+    { id: "L3", name: "Creekside Grill storefront, afternoon",
+      desc: "Creekside Grill: a neighborhood grill in a red-brick storefront with a dark awning and big front windows glowing amber. A blank sign panel above the door with no lettering. A small parking lot along the right side of the building. Late-afternoon sun.",
+      tone: "quiet street, light traffic", doubles: "04A" },
+    { id: "L3D", name: "Creekside Grill storefront, dusk",
+      desc: "The exact same storefront and camera angle as plate L3 (attach L3). Only the time changes: sky deep orange fading to blue, window glow stronger, the lot lamp at the right just switched on.",
+      tone: "evening street, crickets starting", doubles: "07A" },
+    { id: "L4", name: "Creekside Grill interior",
+      desc: "Inside Creekside Grill: a dark wood counter with a register along the back wall and a kitchen pass window behind it. A burgundy leather booth by the front window on the left. Amber pendant lights, exposed brick. A side door with a small window at the right end of the counter. Background diners blurred and faceless.",
+      tone: "grill room tone, low chatter, kitchen sizzle" },
+    { id: "L5", name: "Side parking lot, just after dark",
+      desc: "The side parking lot of the same red-brick building just after dark. The grill's side door at the left under a caged wall light. One tall lot lamp casting a warm pool of light. A single dark-gray sedan (Vanesha's car) parked under the lamp. Wet-look asphalt, deep cool-blue night with a last trace of blue in the sky.",
+      tone: "night parking lot, distant traffic, a lamp buzzing" },
+    { id: "L6", name: "Back service exit, night",
+      desc: "The back service exit of the same red-brick building at night. A gray metal door with a caged warm light above it, stacked milk crates, the edge of a dumpster. A brick corner at frame left leads back toward the side lot. Cool-blue night fill.",
+      tone: "night, back-of-building hum, distant traffic" }
+  ],
+
+  scenes: [
+    { n: 1, title: "Shadow Creek High", when: "Morning", tc: "0:00–0:13", strip: "ext-day",
+      stills: [
+        { id: "01A", plate: "L1", who: ["E", "B"],
+          frame: "Wide shot, 35mm look, camera behind and slightly to one side. Both girls seen from behind at a three-quarter angle, walking toward the entrance, small in the frame.",
+          moment: "Eiesha on the left with a backpack, Bianca on the right. Faces mostly turned away from camera." },
+        { id: "01B", plate: "L1", who: ["E"],
+          frame: "Medium close-up, 50mm look, Eiesha walking toward camera. Bianca's shoulder is a soft blur at the right edge, no face.",
+          moment: "Holding herself together, eyes forward, tired." },
+        { id: "01C", plate: "L1", who: ["B"],
+          frame: "Medium close-up, 50mm look, Bianca walking toward camera, matching reverse of STILL 01B.",
+          moment: "Glancing sideways toward Eiesha off-frame. Warm and matter-of-fact." }
+      ],
+      cut: [
+        { id: "01A-1", still: "01A", act: "They walk toward the doors at an easy pace. Background students drift.", cam: "Slow, gentle push-in from behind." },
+        { id: "01B-1", still: "01B", who: "E", line: "I just wanna get through today without another \"How you holding up?\"", act: "Walking, eyes forward. A small tired exhale, then the line.", cam: "Camera tracks back steadily with her." },
+        { id: "01C-1", still: "01C", who: "B", line: "Got you. Creekside after class. Fries, no feelings.", act: "Walking, glances over at Eiesha off-frame, easy and sure.", cam: "Camera tracks back steadily with her." },
+        { id: "01B-2", still: "01B", who: "E", line: "That might actually work.", act: "A small real smile breaks through. She glances toward Bianca off-frame.", cam: "Camera tracks back steadily with her." }
+      ] },
+
+    { n: 2, title: "Hallway", when: "Morning", tc: "0:13–0:27", strip: "int-day",
+      stills: [
+        { id: "02A", plate: "L2", who: ["S"],
+          frame: "Medium-wide, 35mm look. Stefon walking toward camera down the center of the hallway, blurred students parting around him.",
+          moment: "Books under one arm, shoulders stiff, trying very hard to look ordinary." },
+        { id: "02B", plate: "L2", who: ["E"],
+          frame: "Medium close-up, 50mm look. Eiesha at her open locker on the left wall, looking past camera down the hall.",
+          moment: "Curious, half hidden behind the locker door." },
+        { id: "02C", plate: "L2", who: ["B"],
+          frame: "Medium close-up, 50mm look. Bianca leaning against the lockers, arms crossed, looking past camera down the hall.",
+          moment: "Eyes narrowed, studying someone." },
+        { id: "02D", plate: "L2", who: ["S"], test: true,
+          frame: "Close-up, 85mm look. Stefon stopped mid-hallway, facing straight down the hall, eyes just starting to slide toward camera-left where the girls stand.",
+          moment: "Calm, unblinking, a little too still." }
+      ],
+      cut: [
+        { id: "02A-1", still: "02A", act: "He walks toward camera and adjusts his glasses once, eyes scanning the hall.", cam: "Slow dolly back ahead of him." },
+        { id: "02B-1", still: "02B", who: "E", line: "Who's the new guy?", act: "She leans out from behind the locker door and says it quietly." },
+        { id: "02C-1", still: "02C", who: "B", line: "No idea. But the waves, the glasses? He look like he got a 4.0 and a secret.", act: "Studying him. A small head tilt on \"a secret.\"" },
+        { id: "02D-1", still: "02D", who: "S", line: "I can hear you.", act: "He turns his head slowly toward camera-left and says it flat. He does not blink." },
+        { id: "02C-2", still: "02C", who: "B", line: "Congratulations. Can you blink?", act: "Deadpan, straight past camera at him. One eyebrow up." }
+      ] },
+
+    { n: 3, title: "Hallway", when: "Continuous", tc: "0:27–0:41", strip: "int-day",
+      stills: [
+        { id: "03A", plate: "L2", who: [],
+          inFrame: "Only Eiesha's hand and the cuff of her burgundy-and-mustard sweater. No faces.",
+          frame: "Insert close-up, 85mm look, at locker height.",
+          moment: "Her phone (plain dark screen, no text) is just slipping out of her fingers." },
+        { id: "03B", plate: "L2", who: ["E"], back: ["S"],
+          backNote: "the back of his head with waves, the edge of his glasses and his blue-gray shoulder. No face.",
+          frame: "Over-the-shoulder, 50mm look: over Stefon's right shoulder onto Eiesha's face.",
+          moment: "Stefon holds her phone up between them. Eiesha is startled." },
+        { id: "03C", plate: "L2", who: ["S"], back: ["E"],
+          backNote: "her braids and one shoulder of her sweater. No face.",
+          frame: "Reverse over-the-shoulder, 50mm look: over Eiesha's left shoulder onto Stefon's face.",
+          moment: "Holding the phone out to her. Mild, almost apologetic." },
+        { id: "03D", plate: "L2", who: ["B"],
+          frame: "Tight close-up, 85mm look. Bianca at the lockers.",
+          moment: "Side-eye toward the two of them off-frame." }
+      ],
+      cut: [
+        { id: "03A-1", still: "03A", act: "The phone slips and drops out of the bottom of the frame. The hand reacts a beat late.", cam: "Locked camera." },
+        { id: "03B-1", still: "03B", who: "E", line: "How'd you get over here so fast?", act: "She looks from the phone to him, then down the hall where he was standing.", ots: "Stefon" },
+        { id: "03C-1", still: "03C", who: "S", line: "Good reflexes.", act: "Tiny shrug. He offers the phone.", ots: "Eiesha" },
+        { id: "03D-1", still: "03D", who: "B", line: "That's not reflexes. That's Peach Pass on legs.", act: "Slow side-eye, flat delivery, tiny head shake." },
+        { id: "03B-2", still: "03B", who: "E", line: "Thanks. Creekside after class?", act: "She takes the phone. A small smile, trying to sound casual.", ots: "Stefon" },
+        { id: "03C-2", still: "03C", who: "S", line: "Sure.", act: "A beat too long, then a small nod. The first hint of a smile.", ots: "Eiesha" }
+      ] },
+
+    { n: 4, title: "Creekside Grill", when: "After school", tc: "0:41–0:58", strip: "int-day",
+      stills: [
+        { id: "04B", plate: "L4", who: ["M"],
+          frame: "Medium shot, 35mm look. Marquell behind the dark wood counter at the register, kitchen pass behind him.",
+          moment: "Leaning on the counter with a hopeful grin." },
+        { id: "04C", plate: "L4", who: ["E"],
+          frame: "Medium close-up, 50mm look. Eiesha at the customer side of the counter, the booth and front window soft behind her.",
+          moment: "Patient, unimpressed." },
+        { id: "04D", plate: "L4", who: ["V"],
+          frame: "Medium close-up, 50mm look. Vanesha at the far end of the counter by the kitchen pass, an order ticket in her hand.",
+          moment: "Busy, eyes on the ticket." }
+      ],
+      cut: [
+        { id: "04A", edit: true, still: "L3", act: "Storefront plate L3 with a slow push-in. I add the CREEKSIDE GRILL sign in the edit." },
+        { id: "04B-1", still: "04B", who: "M", line: "Eiesha. Your usual?", act: "Looks up, sees her off-frame, grin gets bigger." },
+        { id: "04C-1", still: "04C", who: "E", line: "Marquell, we broke up.", act: "Flat and patient, like she has said it before." },
+        { id: "04B-2", still: "04B", who: "M", line: "That's crazy. I asked about fries.", act: "Hands up, innocent, completely literal." },
+        { id: "04D-1", still: "04D", who: "V", line: "And you on the clock. Table six!", act: "Doesn't look up at first, then points off-frame with the ticket." },
+        { id: "04B-3", still: "04B", who: "M", line: "I'm going!", act: "Grabs a tray and hustles out of frame to the right." }
+      ] },
+
+    { n: 5, title: "Creekside Grill", when: "Continuous", tc: "0:58–1:15", strip: "int-day",
+      stills: [
+        { id: "05A", plate: "L4", who: ["D"],
+          frame: "Medium-wide, 35mm look. Daymondre stepping in through the front door, daylight behind him, amber interior light on his face.",
+          moment: "Hands in his jacket pockets, a slow grin as he spots someone off-frame left." },
+        { id: "05B", plate: "L4", who: ["D"], test: true,
+          frame: "Medium close-up, 50mm look. Daymondre standing at the end of the burgundy booth, one hand resting on the booth back.",
+          moment: "Looking down at someone seated off-frame left. Amused." },
+        { id: "05C", plate: "L4", who: ["S"],
+          frame: "Medium close-up, 50mm look. Stefon seated in the burgundy booth by the front window.",
+          moment: "Frozen. Back straight, hands flat on the table, eyes up toward someone standing off-frame right." }
+      ],
+      cut: [
+        { id: "05A-1", still: "05A", who: "D", line: "Look at my little brother. First day in the suburbs, already got a table.", act: "He strolls in two steps, spots Stefon off-frame, the grin widens, then the line.", cam: "Slight pan with his walk." },
+        { id: "05C-1", still: "05C", who: "S", line: "What are you doing here?", act: "Low and controlled, eyes locked on Daymondre off-frame." },
+        { id: "05B-1", still: "05B", who: "D", line: "Looking for lemon-pepper wet. And seeing how long you can pretend to be normal.", act: "Light and amused on the first sentence. He leans in a little and drops the smile on the second.", len: 8 }
+      ] },
+
+    { n: 6, title: "Creekside Grill, same booth", when: "Continuous", tc: "1:15–1:28", strip: "int-day",
+      stills: [
+        { id: "06A", plate: "L4", who: ["E"],
+          frame: "Medium close-up, 50mm look. Eiesha seated in the booth across from Stefon.",
+          moment: "Staring across the table." },
+        { id: "06B", plate: "L4", who: ["B"],
+          frame: "Medium close-up, 50mm look. Bianca in the booth beside Eiesha, a drink in her hand.",
+          moment: "Watching, unbothered." }
+      ],
+      cut: [
+        { id: "06A-1", still: "06A", who: "E", line: "That's your brother?", act: "Her eyes follow Daymondre walking off to the right, then snap back to Stefon." },
+        { id: "05C-2", still: "05C", who: "S", line: "Unfortunately.", act: "Eyes closed for half a second, then the line, dry." },
+        { id: "06B-1", still: "06B", who: "B", line: "Mhm. One look like honor roll, the other like Buckhead security knows him by name.", act: "Sips, sets the cup down, points two fingers from Stefon to off-frame right.", len: 8 }
+      ] },
+
+    { n: 7, title: "Creekside Grill", when: "Evening", tc: "1:28–1:40", strip: "int-night",
+      stills: [
+        { id: "07B", plate: "L4", light: "Evening version of plate L4: windows dark blue outside, fewer diners, the amber lights feel warmer.", who: ["V"],
+          frame: "Medium shot, 35mm look. Vanesha by the side door at the right end of the counter.",
+          moment: "Bag on her shoulder, keys in hand, one hand on the door." },
+        { id: "07C", plate: "L4", light: "Evening version of plate L4: windows dark blue outside, fewer diners, the amber lights feel warmer.", who: ["M"],
+          frame: "Medium shot, 35mm look. Marquell behind the counter hauling a full trash bag.",
+          moment: "Mid-chore, looking toward the side door off-frame right." }
+      ],
+      cut: [
+        { id: "07A", edit: true, still: "L3D", act: "Dusk storefront plate L3D, held for a beat so the audience feels the day turn to night." },
+        { id: "07B-1", still: "07B", who: "V", line: "Marquell, I'm heading home.", act: "Calls it over her shoulder as she reaches for the door." },
+        { id: "07C-1", still: "07C", who: "M", line: "Text when you get there.", act: "Doesn't stop working. Says it like a habit." },
+        { id: "07B-2", still: "07B", who: "V", line: "We live together.", act: "Stops with her hand on the door and turns back, amused." },
+        { id: "07C-2", still: "07C", who: "M", line: "And I'm still asking.", act: "Shrugs with the bag. Sincere, not joking." }
+      ] },
+
+    { n: 8, title: "Parking lot", when: "Just after dark", tc: "1:40–1:54", strip: "ext-night",
+      stills: [
+        { id: "08A", plate: "L5", who: ["V"],
+          frame: "Wide shot, 35mm look. Vanesha walking from the side door toward the dark-gray sedan under the lot lamp, small in the frame, seen from behind.",
+          moment: "Alone. Digging in her bag for keys." },
+        { id: "08B", plate: "L5", who: ["D"],
+          frame: "Medium shot, 50mm look. Daymondre leaning against the back of the sedan, half in the lamp's warm light, half in blue shadow.",
+          moment: "Easy smile, head tilted. Perfectly relaxed." },
+        { id: "08C", plate: "L5", who: ["V"], test: true,
+          frame: "Medium close-up, 50mm look. Vanesha at the driver door, keys in one hand and phone in the other, turned toward camera-right.",
+          moment: "Irritated, not scared." },
+        { id: "08D", plate: "L5", light: "Background fully blurred and dark, a hint of warm lamp light on one cheek.", who: ["D"],
+          frame: "Extreme close-up, 85mm look. Daymondre's face fills the frame from brow to chin.",
+          moment: "Normal human face, brown eyes, mouth closed in a faint smirk." },
+        { id: "08V", custom: "vamp", plate: "L5", who: ["D"],
+          frame: "Same frame as STILL 08D.", moment: "Vampire face." },
+        { id: "08E", plate: "L5", who: [], editOnly: true,
+          inFrame: "No people. Vanesha's phone (dark screen, no text) lying face-up on the asphalt with her keys beside it.",
+          frame: "Insert, ground-level close-up, 85mm look, under the warm lot lamp.",
+          moment: "The phone has just landed. Wet-look asphalt, cool blue shadows." }
+      ],
+      cut: [
+        { id: "08A-1", still: "08A", act: "She walks to the car digging for her keys. No one else is visible.", cam: "Slow creeping push-in from behind." },
+        { id: "08B-1", still: "08B", who: "D", line: "Need a ride?", act: "He is already there when the shot starts. Easy smile, small head tilt." },
+        { id: "08C-1", still: "08C", who: "V", line: "Need you to stop sneaking up on people.", act: "Startles for a split second, then irritated. Points at him with the keys." },
+        { id: "08D-1", still: "08D", end: "08V", act: "His irises shift from brown to red-amber, faint dark veins rise under both eyes, and his lips part to show two small fangs. Hold on the changed face. Same face shape throughout. No blood.", cam: "Locked camera." },
+        { id: "08E", edit: true, still: "08E", act: "Hard cut to the phone on the asphalt with an impact sound and a small camera jolt. Vanesha's gasp plays over the cut. No contact shown." }
+      ] },
+
+    { n: 9, title: "Parking lot", when: "Continuous", tc: "1:54–2:06", strip: "ext-night",
+      stills: [
+        { id: "09A", plate: "L5", who: ["M"],
+          frame: "Medium-wide, 35mm look. Marquell bursting out of the side door under the caged wall light, apron still on.",
+          moment: "Scanning the lot, alarmed." },
+        { id: "09B", plate: "L5", who: ["M"], back: ["V"],
+          backNote: "her dark waves and the striped sleeve of her jacket. No face.",
+          frame: "Over-the-shoulder, 50mm look: over Vanesha's shoulder onto Marquell crouched in front of her beside the car.",
+          moment: "His hands hover near her shoulders. Scared but steady." },
+        { id: "09C", plate: "L5", who: ["V"],
+          frame: "Medium close-up, 50mm look. Vanesha sitting on the asphalt against the driver door of the sedan.",
+          moment: "Conscious and shaken, one hand at her collar. No wound, no blood." }
+      ],
+      cut: [
+        { id: "09A-1", still: "09A", who: "M", line: "Vee!", act: "The door flies open, he scans the lot, spots her off-frame right, shouts and runs out of frame." },
+        { id: "09B-1", still: "09B", who: "M", line: "Hey, look at me. Who was it?", act: "Crouched, searching her face, voice low and urgent.", ots: "Vanesha" },
+        { id: "09C-1", still: "09C", who: "V", line: "Leather jacket. His eyes...", act: "Breathing fast. Her eyes are unfocused, then find Marquell off-frame. She trails off." }
+      ] },
+
+    { n: 10, title: "Grill and group chat", when: "Continuous", tc: "2:06–2:19", strip: "int-night",
+      stills: [
+        { id: "10B", plate: "L4", light: "Evening version of plate L4: windows dark blue outside, nearly empty, amber lights.", who: ["E"],
+          frame: "Medium close-up, 50mm look. Eiesha in the booth, her face lit by her phone (screen turned away from camera). The seat across from her is empty.",
+          moment: "Reading something that scares her." },
+        { id: "10C", plate: "L4", light: "Evening version of plate L4: windows dark blue outside, nearly empty, amber lights.", who: ["B"],
+          frame: "Medium close-up, 50mm look. Bianca in the booth, phone lowered from her ear, looking toward the back of the grill.",
+          moment: "Quiet and certain." }
+      ],
+      cut: [
+        { id: "10G", edit: true, graphic: true, act: "The SHADOW CREEK group chat, built by me so every word is readable. Marquell: Vanesha got attacked. I'm with her. Call somebody! / Kari: AT CREEKSIDE??? / Bianca: I'm calling 911. Everybody stay inside." },
+        { id: "10B-1", still: "10B", who: "E", line: "Wait... where's Stefon?", act: "Reads, looks up at the empty seat across the booth, then says it." },
+        { id: "10C-1", still: "10C", who: "B", line: "He's not who I'm worried about.", act: "Eyes fixed toward the back of the grill. She does not look at Eiesha." }
+      ] },
+
+    { n: 11, title: "Back service exit", when: "Night", tc: "2:19–2:38", strip: "ext-night",
+      stills: [
+        { id: "11A", plate: "L6", who: ["S", "D"],
+          frame: "Wide two-shot, 35mm look. Stefon on the left facing Daymondre on the right, who leans on the brick wall beside the gray service door. Both small in the frame under the caged light.",
+          moment: "Stefon squared up. Daymondre has not moved." },
+        { id: "11B", plate: "L6", who: ["S"],
+          frame: "Close-up, 85mm look. Stefon, warm caged light on one side of his face, cool blue on the other.",
+          moment: "Quiet fury, jaw tight." },
+        { id: "11C", plate: "L6", who: ["D"],
+          frame: "Close-up, 85mm look. Daymondre leaning back against the brick, the gold bat pendant catching the light.",
+          moment: "Relaxed. Zero remorse." }
+      ],
+      cut: [
+        { id: "11A-1", still: "11A", act: "Stefon takes two hard steps toward Daymondre and stops. Daymondre does not move.", cam: "Locked camera." },
+        { id: "11B-1", still: "11B", who: "S", line: "You attacked Marquell's sister?", act: "Low, controlled, furious." },
+        { id: "11C-1", still: "11C", who: "D", line: "I told you I was hungry.", act: "A shrug." },
+        { id: "11B-2", still: "11B", who: "S", line: "This ain't 1864. They got cameras everywhere now.", act: "He leans closer, voice low so nobody hears.", cam: "Very slight push-in." },
+        { id: "11C-2", still: "11C", who: "D", line: "I know. Between doorbell cameras and traffic on 285, Atlanta ain't vampire-friendly.", act: "Counts the two complaints on his fingers, honestly annoyed.", len: 8 }
+      ] },
+
+    { n: 12, title: "Back service exit", when: "Continuous", tc: "2:38–2:51", strip: "ext-night",
+      stills: [
+        { id: "12A", plate: "L6", who: ["E", "B"],
+          frame: "Medium two-shot, 35mm look. Eiesha and Bianca coming around the brick corner at frame left.",
+          moment: "Stopped mid-step. Both staring at something off-frame right." },
+        { id: "12B", plate: "L6", who: ["E"],
+          frame: "Close-up, 85mm look. Eiesha at the brick corner, the caged light warm on her face.",
+          moment: "Eyes on Stefon off-frame. Not breathing." },
+        { id: "12C", plate: "L6", who: ["S"],
+          frame: "Medium close-up, 50mm look. Stefon turned toward the corner at camera-left.",
+          moment: "Caught. One hand half raised." },
+        { id: "12D", plate: "L6", who: ["B"], back: ["E"],
+          backNote: "her braids and the shoulder of her sweater at the edge of frame. No face.",
+          frame: "Medium close-up, 50mm look. Bianca just behind Eiesha's shoulder.",
+          moment: "Already backing away, one hand on Eiesha's sleeve, eyes locked off-frame right." }
+      ],
+      cut: [
+        { id: "12A-1", still: "12A", act: "They come around the corner and freeze. Neither one speaks.", cam: "Locked camera." },
+        { id: "12B-1", still: "12B", who: "E", line: "Vampire?", act: "Barely above a whisper." },
+        { id: "11C-3", still: "11C", act: "He turns his head slowly toward camera-left. The smile fades into something cold. Hold.", cam: "Locked camera.", note: "My added beat: two seconds of real threat before the joke, per your continuity rule 10." },
+        { id: "12C-1", still: "12C", who: "S", line: "Eiesha, I can explain.", act: "Fast and quiet, palm out." },
+        { id: "11C-4", still: "11C", who: "D", line: "Start with why you a hundred and sixty still taking AP History.", act: "Delighted. Looks from the girls off-frame left back to Stefon." },
+        { id: "12D-1", still: "12D", who: "B", line: "Girl... we are NOT going back in that grill.", act: "Pulls Eiesha's sleeve. Her eyes never leave Daymondre.", ots: "Eiesha" },
+        { id: "08D-2", still: "08D", act: "His irises flash from brown to red-amber and hold. Mouth stays closed in a smirk. No fangs.", cam: "Locked camera." },
+        { id: "12B-2", still: "12B", act: "She takes one step back, eyes wide, braids swinging.", cam: "Locked camera.", note: "Hard cut to black on her step." }
+      ] }
+  ],
+
+  // V7 spoken lines, scene by scene, for the coverage check.
+  script: {
+    1: ["E|I just wanna get through today without another \"How you holding up?\"", "B|Got you. Creekside after class. Fries, no feelings.", "E|That might actually work."],
+    2: ["E|Who's the new guy?", "B|No idea. But the waves, the glasses? He look like he got a 4.0 and a secret.", "S|I can hear you.", "B|Congratulations. Can you blink?"],
+    3: ["E|How'd you get over here so fast?", "S|Good reflexes.", "B|That's not reflexes. That's Peach Pass on legs.", "E|Thanks. Creekside after class?", "S|Sure."],
+    4: ["M|Eiesha. Your usual?", "E|Marquell, we broke up.", "M|That's crazy. I asked about fries.", "V|And you on the clock. Table six!", "M|I'm going!"],
+    5: ["D|Look at my little brother. First day in the suburbs, already got a table.", "S|What are you doing here?", "D|Looking for lemon-pepper wet. And seeing how long you can pretend to be normal."],
+    6: ["E|That's your brother?", "S|Unfortunately.", "B|Mhm. One look like honor roll, the other like Buckhead security knows him by name."],
+    7: ["V|Marquell, I'm heading home.", "M|Text when you get there.", "V|We live together.", "M|And I'm still asking."],
+    8: ["D|Need a ride?", "V|Need you to stop sneaking up on people."],
+    9: ["M|Vee! Hey, look at me. Who was it?", "V|Leather jacket. His eyes..."],
+    10: ["E|Wait... where's Stefon?", "B|He's not who I'm worried about."],
+    11: ["S|You attacked Marquell's sister?", "D|I told you I was hungry.", "S|This ain't 1864. They got cameras everywhere now.", "D|I know. Between doorbell cameras and traffic on 285, Atlanta ain't vampire-friendly."],
+    12: ["E|Vampire?", "S|Eiesha, I can explain.", "D|Start with why you a hundred and sixty still taking AP History.", "B|Girl... we are NOT going back in that grill."]
+  }
+};
+
+// Prompt builders shared by the page and the checker.
+const STYLE = "Grounded, expressive, cinematic stylized 3D animation. Soft geometric faces, expressive eyes, smooth but real skin shading, believable fabric. Not photoreal, not live-action, not anime, not flat illustration.";
+
+function plateById(B, id) { return B.plates.find(p => p.id === id); }
+function allStills(B) { return B.scenes.flatMap(sc => sc.stills.map(s => ({ ...s, scene: sc.n }))); }
+function stillById(B, id) { return allStills(B).find(s => s.id === id); }
+function allCuts(B) { return B.scenes.flatMap(sc => sc.cut.map(c => ({ ...c, scene: sc.n }))); }
+
+function kickoffPrompt(B) {
+  const C = B.chars;
+  return [
+    "You are the still-image artist for THE VAMPIRE GROUP CHAT, an original stylized 3D animated comedy set in Shadow Creek, Georgia, a fictional suburb of Atlanta.",
+    "",
+    "The cast is Eiesha, Bianca, Stefon, Daymondre, Marquell and Vanesha. We build one character sheet for each in this chat first. Once I approve a sheet, it is the only source of truth for that character's face, hair, skin tone, glasses, jewelry and outfit.",
+    "",
+    "Rules for every image in this chat:",
+    "1. One look only: " + STYLE,
+    "2. Never redesign anyone. No added tattoos, facial hair, accessories, hairstyles or outfit changes. Everyone wears the same clothes all episode, because the story happens in one day.",
+    "3. Vertical 9:16, framed for a phone screen. Keep heads and hands out of the top and bottom 10% of the frame.",
+    "4. No readable text of any kind: no signs, captions, phone-screen text, logos or watermarks. Leave sign panels and phone screens blank. Text gets added later in the edit.",
+    "5. One single frame per prompt. Never a grid, a collage or multiple panels. The only exception is a prompt labelled CHARACTER SHEET.",
+    "6. Only the characters I name appear in the foreground. Background people stay blurred and faceless.",
+    "7. These are original characters. Do not base anyone on a real actor or on an existing show.",
+    "8. I will send prompts labelled CHARACTER SHEET, PLATE or STILL with an ID. Reply with the image and repeat the ID. If something in a prompt conflicts with the character sheets, the sheets win; tell me what you changed.",
+    "",
+    "Identity locks:",
+    "- " + C.S.lock,
+    "- " + C.D.lock,
+    "- Marquell wears the Creekside Grill dark polo and burgundy apron in every image. Vanesha is his older sister: family resemblance, not the same face.",
+    "- Bianca is East Asian-American. Eiesha, Stefon and Daymondre are Black. Marquell and Vanesha are Latino. Skin tones never shift between images.",
+    "",
+    "Reply \"Locked in\" and wait for the first prompt."
+  ].join("\n");
+}
+
+function sheetPrompt(B, sh, i) {
+  const C = B.chars, ch = C[sh.k], first = i === 0;
+  const lines = [
+    "CHARACTER SHEET — " + ch.name + " (" + (i + 1) + " of " + B.sheets.length + ")",
+    first
+      ? "Update to the kickoff: we are making the six character sheets here first, one at a time. A prompt labelled CHARACTER SHEET is the one exception to rule 5."
+      : "Same recipe as the Daymondre sheet. A prompt labelled CHARACTER SHEET is the one exception to rule 5.",
+    "",
+    "ATTACHED: " + sh.ref + " (old reference for " + ch.name + ")" + (first ? "." : ", plus the approved new Daymondre sheet as the style reference."),
+    "Use the old reference for identity only: face shape, features, skin tone, hair and build. Redraw " + ch.name + " in our locked look: " + STYLE,
+    first
+      ? "This sheet sets the look for the whole cast, so get the shading and proportions right here."
+      : "Match the approved Daymondre sheet exactly for rendering style, skin shading, eye size and body proportions, so the cast looks like one show. Different person, same show.",
+    "",
+    "WHO: " + ch.look,
+    "OUTFIT (the only one, worn all episode): " + sh.outfit,
+    "",
+    "LAYOUT: one landscape 3:2 image on a plain mid-gray studio background.",
+    "- Left: full body, front view, relaxed neutral stance.",
+    "- Center: large face close-up, neutral expression.",
+    "- Right: three smaller full-body views: three-quarter, side and back.",
+    "- Bottom row: five head-and-shoulders expressions: " + sh.faces + "."
+  ];
+  if (sh.extra) lines.push("- " + sh.extra);
+  lines.push("");
+  lines.push("RULES:");
+  lines.push("- The same face, hair and outfit in every panel.");
+  lines.push("- No text, labels, names, captions or logos anywhere on the sheet.");
+  lines.push("- An original character. Not based on any real actor or existing show.");
+  if (ch.lock) lines.push("- " + ch.lock);
+  lines.push("- " + sh.drop);
+  return lines.join("\n");
+}
+
+function platePrompt(B, p) {
+  return [
+    "PLATE " + p.id + " — " + p.name,
+    "Vertical 9:16 location plate. No characters in the foreground. No readable text anywhere.",
+    "Style: " + STYLE,
+    "",
+    p.desc,
+    "",
+    "This is a locked set. Every later still in this location must match this layout, these colors and this lighting."
+  ].join("\n");
+}
+
+function stillPrompt(B, s) {
+  const C = B.chars;
+  const p = plateById(B, s.plate);
+  if (s.custom === "vamp") {
+    return [
+      "STILL 08V — edit of the approved STILL 08D (attach 08D).",
+      "Change only three things:",
+      "1. His irises become red-amber.",
+      "2. Faint dark veins appear under both eyes.",
+      "3. His lips part to show two small fangs.",
+      "Everything else stays identical: same face shape, goatee, skin tone, hair, leather jacket, gold bat pendant, framing and lighting.",
+      "No blood, no wounds, no text. Vertical 9:16."
+    ].join("\n");
+  }
+  const who = (s.who || []).map(k => "- " + C[k].name + ": " + C[k].look);
+  const back = (s.back || []).map(k => "- " + C[k].name + ", back to camera: we see only " + s.backNote);
+  const inFrame = s.inFrame ? ["- " + s.inFrame] : who.concat(back);
+  const keys = (s.who || []).concat(s.back || []);
+  const rules = [
+    "Only the people listed above appear in the foreground. Background people stay blurred and faceless.",
+    "No captions, signs, logos or readable text. Phone screens and sign panels stay blank.",
+    "No outfit, hair or skin-tone changes from the character sheets."
+  ];
+  if (keys.includes("S")) rules.push(C.S.lock);
+  if (keys.includes("D")) rules.push(C.D.lock);
+  const attach = ["plate " + s.plate].concat(keys.map(k => C[k].name + " sheet"));
+  return [
+    "STILL " + s.id + " — vertical 9:16, one single frame.",
+    "Attach with this prompt: " + attach.join(", ") + ".",
+    "Style: same locked look as the kickoff. " + STYLE,
+    "",
+    "LOCATION: plate " + p.id + ", " + p.name + ". Match the approved plate exactly." + (s.light ? " " + s.light : ""),
+    "IN FRAME:",
+    inFrame.join("\n"),
+    "FRAMING: " + s.frame,
+    "MOMENT: " + s.moment,
+    "RULES:",
+    rules.map(r => "- " + r).join("\n")
+  ].join("\n");
+}
+
+function clipLength(c) {
+  if (c.len) return c.len;
+  if (!c.line) return 4;
+  const words = c.line.trim().split(/\s+/).length;
+  if (words <= 5) return 4;
+  if (words <= 13) return 6;
+  return 8;
+}
+
+function clipPrompt(B, c) {
+  const C = B.chars;
+  const s = stillById(B, c.still);
+  const p = plateById(B, s.plate);
+  const lines = [
+    "CLIP " + c.id + " — start frame: STILL " + c.still + (c.end ? ". Last frame, if Flow offers one: STILL " + c.end : "") + ".",
+    "Vertical 9:16. One continuous shot, no cuts. Length: " + clipLength(c) + " seconds.",
+    "",
+    "THE VAMPIRE GROUP CHAT. Premium expressive stylized 3D animation that matches the start frame exactly: same face, hair, skin tone, wardrobe, set and lighting from first frame to last. Natural, restrained acting. No morphing, no new characters, no outfit changes, no captions, no subtitles, no on-screen text.",
+    "",
+    "ACTION: " + c.act,
+    "CAMERA: " + (c.cam || "Hold the start frame's framing. At most a very slow push-in.")
+  ];
+  if (c.line) {
+    const ch = C[c.who];
+    lines.push("DIALOGUE: " + ch.name + " says: " + c.line);
+    lines.push("VOICE: " + ch.voice + ".");
+    lines.push("Only " + ch.name + " speaks, once, then stops." + (c.ots ? " " + c.ots + " stays back-to-camera, silent, and does not turn around." : ""));
+  } else {
+    lines.push("DIALOGUE: none. Nobody speaks. Mouths stay closed unless the action says otherwise.");
+  }
+  lines.push("AUDIO: " + p.tone + ". No music.");
+  return lines.join("\n");
+}
+
+function punchUpPrompt(B) {
+  const C = B.chars;
+  const out = [
+    "You are the comedy punch-up writer for THE VAMPIRE GROUP CHAT, Season 1 Episode 1, \"New Blood, Who Dis?\" Below is the locked V7 script.",
+    "",
+    "Your job: make it funnier without breaking the shoot. The shots are already planned line by line, so these rules are hard limits:",
+    "1. Same 12 scenes, same speakers, same number of lines in the same order.",
+    "2. A new line can be at most 3 words longer than the line it replaces.",
+    "3. Jokes come from character: Bianca's quick suspicion, Eiesha's dry wit, Marquell's literal deflection, Vanesha's independence, Stefon's stiff awkwardness, Daymondre's smug excuses.",
+    "4. Atlanta references must be something that character would really say. Keep Peach Pass, lemon-pepper wet, Buckhead and 285 unless you can clearly beat them.",
+    "5. No new characters, first names only, no narrator, nothing that makes Vanesha's attack a joke.",
+    "6. Suggest at most 8 swaps. Leave a line alone if it already works.",
+    "",
+    "Give me a table: scene number, speaker, original line, new line, one sentence on why it is funnier.",
+    "",
+    "LOCKED V7 SCRIPT"
+  ];
+  B.scenes.forEach(sc => {
+    out.push("");
+    out.push("Scene " + sc.n + " — " + sc.title + ", " + sc.when);
+    B.script[sc.n].forEach(l => {
+      const [k, text] = l.split("|");
+      out.push(C[k].name + ": " + text);
+    });
+    if (sc.n === 10) out.push("(Group chat on screen — Marquell: Vanesha got attacked. I'm with her. Call somebody! / Kari: AT CREEKSIDE??? / Bianca: I'm calling 911. Everybody stay inside.)");
+  });
+  return out.join("\n");
+}
+
+const PROMPTS = { STYLE, sheetPrompt, plateById, allStills, stillById, allCuts, kickoffPrompt, platePrompt, stillPrompt, clipLength, clipPrompt, punchUpPrompt };
+
+(function () {
+  const B = BOARD, P = PROMPTS, C = B.chars;
+  const esc = s => String(s).replace(/[&<>"]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]));
+  const STRIP = { "ext-day": "EXT · DAY", "int-day": "INT · DAY", "int-night": "INT · NIGHT", "ext-night": "EXT · NIGHT" };
+
+  const stills = P.allStills(B);
+  const cuts = P.allCuts(B);
+  const veo = cuts.filter(c => !c.edit);
+  const spoken = veo.filter(c => c.line).length;
+  const silent = veo.length - spoken;
+  const imagesTotal = B.sheets.length + B.plates.length + stills.length;
+
+  // ----- prompt registry -----
+  const TEXT = {};
+  TEXT.kickoff = P.kickoffPrompt(B);
+  TEXT.punchup = P.punchUpPrompt(B);
+  B.sheets.forEach((sh, i) => { TEXT["sheet-" + sh.k] = P.sheetPrompt(B, sh, i); });
+  B.plates.forEach(p => { TEXT["plate-" + p.id] = P.platePrompt(B, p); });
+  stills.forEach(s => { TEXT["still-" + s.id] = P.stillPrompt(B, s); });
+  veo.forEach(c => { TEXT["clip-" + c.id] = P.clipPrompt(B, c); });
+
+  // ----- saved ticks (this browser only) -----
+  const KEY = "vgc-ep01-board-v1";
+  let ticks = {};
+  try { ticks = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { ticks = {}; }
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ticks)); } catch (e) { /* ticks just won't persist */ } };
+
+  const copyBtn = (key, label, cls) => '<button type="button" class="copy ' + (cls || "") + '" data-copy="' + esc(key) + '">' + esc(label) + "</button>";
+  const promptBox = (key) => '<details class="prompt" id="d-' + esc(key) + '"><summary>Read the prompt</summary><pre id="t-' + esc(key) + '">' + esc(TEXT[key]) + "</pre></details>";
+  const okBox = (id, label) => '<label class="okbox"><input type="checkbox" id="ok-' + esc(id) + '" data-ok="' + esc(id) + '"' + (ticks[id] ? " checked" : "") + "> " + esc(label) + "</label>";
+  const names = s => (s.who || []).map(k => C[k].name).concat((s.back || []).map(k => C[k].name + " (back)")).join(", ");
+
+  // ----- slate -----
+  const cell = (k, v) => '<div class="slate-cell"><span class="eyebrow">' + esc(k) + "</span><b>" + esc(v) + "</b></div>";
+  const slate =
+    '<header class="slate" id="top"><div class="clapper" aria-hidden="true"></div><div class="slate-body">' +
+    '<p class="eyebrow">The Vampire Group Chat · Season 1 Episode 1 · Shot board</p>' +
+    "<h1>New Blood, <span>Who Dis?</span></h1>" +
+    '<p class="lede">Every still ChatGPT makes and every clip Google Flow animates, in cut order, each with a prompt you can copy. Built from your V7 script and V9 cast. Nothing here has been generated yet.</p>' +
+    '<div class="slate-grid">' +
+    cell("Script", "V7") + cell("Cast", "V9") + cell("Scenes", B.scenes.length) + cell("Images", imagesTotal) +
+    cell("Clips", veo.length) + cell("Runtime", "2:51") + cell("Date", "Nov 10 2026") +
+    "</div>" +
+    '<div class="meters">' +
+    '<div class="meter"><div class="meter-top"><span>Images approved</span><span class="mono" id="m-img">0 / ' + imagesTotal + '</span></div><div class="bar"><i id="b-img"></i></div></div>' +
+    '<div class="meter"><div class="meter-top"><span>Clips approved</span><span class="mono" id="m-clip">0 / ' + veo.length + '</span></div><div class="bar"><i id="b-clip"></i></div></div>' +
+    "</div></div></header>";
+
+  // ----- jump bar -----
+  const jumps = [["test", "3-shot test"], ["cast", "Cast sheets"], ["team", "Team"], ["looks", "Kickoff + plates"]]
+    .concat(B.scenes.map(sc => ["scene-" + sc.n, "SC " + String(sc.n).padStart(2, "0")]))
+    .concat([["beats", "Beats"], ["budget", "Budget"], ["calls", "Your calls"]]);
+  const jump = '<nav class="jump" aria-label="Jump to section">' + jumps.map(j => '<button type="button" data-jump="' + j[0] + '">' + esc(j[1]) + "</button>").join("") + "</nav>";
+
+  // ----- 3-shot test -----
+  const testStills = stills.filter(s => s.test);
+  const testPlates = [...new Set(testStills.map(s => s.plate))];
+  const testClips = veo.filter(c => testStills.some(s => s.id === c.still)).filter((c, i, a) => a.findIndex(x => x.still === c.still) === i);
+  const test =
+    '<section id="test"><p class="eyebrow">Start here</p><h2>Tonight: the 3-shot test</h2>' +
+    '<p class="lede">Your own bible says to prove the look on three shots before making the rest. One school shot, one grill shot, one parking-lot shot. First the six cast sheets, then six images and three clips.</p>' +
+    '<ol class="steps">' +
+    '<li><div class="step-body"><p><b>Open a new ChatGPT chat</b> and paste the kickoff.</p><div class="row">' + copyBtn("kickoff", "Copy kickoff") + "</div></div></li>" +
+    '<li><div class="step-body"><p><b>Make the six cast sheets, one at a time.</b> Attach the old reference each prompt names. Daymondre goes first and sets the look; attach his approved new sheet with every sheet after him. Send me each one as it comes.</p><div class="row">' +
+    B.sheets.map((sh, i) => copyBtn("sheet-" + sh.k, (i + 1) + " · " + C[sh.k].name)).join("") + "</div></div></li>" +
+    '<li><div class="step-body"><p><b>Make three location plates.</b> One prompt each. Approve them before any character goes in.</p><div class="row">' +
+    testPlates.map(id => copyBtn("plate-" + id, "Copy plate " + id)).join("") + "</div></div></li>" +
+    '<li><div class="step-body"><p><b>Make three stills.</b> With each prompt, attach the plate and that character\'s new sheet again. Long chats forget.</p><div class="row">' +
+    testStills.map(s => copyBtn("still-" + s.id, "Copy still " + s.id + " · " + names(s))).join("") + "</div></div></li>" +
+    '<li><div class="step-body"><p><b>Send all six images to me.</b> Name them by ID (EP01_L2.png, EP01_02D.png). I check faces, outfits and sets against your bible and answer pass or fix.</p></div></li>' +
+    '<li><div class="step-body"><p><b>Animate the three passed stills in Google Flow.</b> Start each video from the still, vertical, Veo 3.1 Fast, and paste the clip prompt. Cost: 60 credits.</p><div class="row">' +
+    testClips.map(c => copyBtn("clip-" + c.id, "Copy clip " + c.id, "flow")).join("") + "</div></div></li>" +
+    '<li><div class="step-body"><p><b>Send me the three clips.</b> If they pass, the other ' + (veo.length - 3) + " clips follow the same recipe. If not, we fix the recipe before spending more.</p>" +
+    '<div class="passbar"><span class="eyebrow">Pass bar, from your style bible</span><ul>' +
+    "<li>Same face in the clip as in the still, start to finish. Stefon most of all.</li>" +
+    "<li>Same shading and color feel across school, grill and night.</li>" +
+    "<li>Outfits do not change.</li><li>The right character speaks, in a voice that fits.</li><li>No burned-in captions or garbled text.</li>" +
+    "</ul></div></div></li></ol></section>";
+
+  // ----- cast sheets -----
+  const sheetCard = (sh, i) =>
+    '<div class="card" data-card="sheet-' + sh.k + '"><div class="card-top"><span class="sid">' + (i + 1) + '</span><span class="chip">Cast sheet</span>' +
+    (i === 0 ? '<span class="chip test">Style anchor</span>' : "") + "</div>" +
+    '<p class="who">' + esc(C[sh.k].name) + "</p><p>Attach: " + esc(sh.ref) + (i === 0 ? "." : " and the approved new Daymondre sheet.") + " " + esc(sh.outfit) + "</p>" +
+    promptBox("sheet-" + sh.k) +
+    '<div class="card-foot">' + copyBtn("sheet-" + sh.k, "Copy ChatGPT prompt") + okBox("img-sheet-" + sh.k, "Approved") + "</div></div>";
+  const cast =
+    '<section id="cast"><h2>Cast sheets</h2>' +
+    '<p class="lede">Your old references are in three different looks: Stefon, Marquell, Vanesha and Bianca are close to photoreal, Daymondre is stylized 3D, and Eiesha is a cartoon face. Redrawing all six in ChatGPT, in one look, fixes that at the source. Daymondre is closest to the look your style bible describes, so he goes first and every later sheet is matched to his.</p>' +
+    '<div class="grid">' + B.sheets.map(sheetCard).join("") + "</div></section>";
+
+  // ----- team -----
+  const players = [
+    ["ChatGPT", "Stills", "Makes all " + imagesTotal + " images and punches up the jokes.", "Checked Nov 10: ChatGPT makes images only now. Its video tool, Sora, closed in 2026."],
+    ["Google Flow", "Motion", "Turns each approved still into a clip with Veo 3.1.", "On Google AI Pro: 1,000 credits a month plus 50 a day. One clip costs 10 (Lite), 20 (Fast) or 100 (Quality)."],
+    ["Claude", "Quarterback", "Shot list, prompts, a check on every image and clip, the group chat graphic, captions, the final cut.", "I build the on-screen text myself so it is always readable."],
+    ["Perplexity", "Scout", "Looks up tool limits and platform rules before you spend.", "Its own video is a handful of 8-second clips a month on Pro with no model choice, so it stays off the production line."],
+    ["JWood", "Showrunner", "Final say on every still and clip. Three music cues.", "Nothing is approved until you say so."],
+    ["Higgsfield", "Bench", "Held back for a fix-it shot.", "155 credits left on your Plus plan, checked tonight. Your notes say the plan runs to Dec 9."]
+  ];
+  const team =
+    '<section id="team"><h2>Who plays what</h2><div class="team">' +
+    players.map(p => '<div class="player"><b>' + esc(p[0]) + '</b><span class="role">' + esc(p[1]) + "</span><div>" + esc(p[2]) + "<small>" + esc(p[3]) + "</small></div></div>").join("") +
+    "</div>" +
+    '<p class="lede">Every shot moves the same way: ChatGPT still, I check it, Flow clip, I check it, into the edit. Save stills as EP01_02D.png and clips as EP01_02D-1_v1.mp4 so nothing gets mixed up.</p></section>';
+
+  // ----- kickoff + plates -----
+  const plateCard = p =>
+    '<div class="card" data-card="plate-' + p.id + '"><div class="card-top"><span class="sid">' + esc(p.id) + '</span><span class="chip">Plate</span>' +
+    (p.doubles ? '<span class="chip edit">Also shot ' + esc(p.doubles) + "</span>" : "") + "</div>" +
+    '<p class="who">' + esc(p.name) + "</p><p>" + esc(p.desc) + "</p>" + promptBox("plate-" + p.id) +
+    '<div class="card-foot">' + copyBtn("plate-" + p.id, "Copy ChatGPT prompt") + okBox("img-" + p.id, "Approved") + "</div></div>";
+  const looks =
+    '<section id="looks"><h2>Kickoff and location plates</h2>' +
+    '<p class="lede">The kickoff sets the rules for the whole ChatGPT chat. The seven plates are empty sets. Every still names the plate it has to match, which is what keeps the grill looking like the same grill.</p>' +
+    '<div class="grid">' +
+    '<div class="card"><div class="card-top"><span class="sid">Kickoff</span><span class="chip">Paste once</span></div><p>Paste it first. If ChatGPT starts drifting, open a fresh chat, paste it again and attach the six approved sheets.</p>' + promptBox("kickoff") + '<div class="card-foot">' + copyBtn("kickoff", "Copy kickoff") + "</div></div>" +
+    '<div class="card"><div class="card-top"><span class="sid">Punch-up</span><span class="chip">Optional</span></div><p>Hands ChatGPT the locked V7 script with hard limits, so new jokes fit the shots already planned. Run it in a separate chat from the images.</p>' + promptBox("punchup") + '<div class="card-foot">' + copyBtn("punchup", "Copy punch-up prompt") + "</div></div>" +
+    B.plates.map(plateCard).join("") + "</div></section>";
+
+  // ----- scenes -----
+  let cutNo = 0;
+  const stillCard = s =>
+    '<div class="card" data-card="still-' + s.id + '"><div class="card-top"><span class="sid">' + esc(s.id) + "</span>" +
+    (s.test ? '<span class="chip test">Test shot</span>' : "") + (s.editOnly ? '<span class="chip edit">No video needed</span>' : "") +
+    '<span class="chip">' + esc(s.custom === "vamp" ? "Edit of 08D" : "Plate " + s.plate) + "</span></div>" +
+    '<p class="who">' + esc(s.custom === "vamp" ? "Daymondre, vampire face" : (names(s) || "No faces")) + "</p>" +
+    "<p>" + esc(s.custom === "vamp" ? "The approved 08D with three changes: red-amber eyes, faint veins, two small fangs. Used as the last frame of the transformation." : s.frame + " " + s.moment) + "</p>" +
+    promptBox("still-" + s.id) +
+    '<div class="card-foot">' + copyBtn("still-" + s.id, "Copy ChatGPT prompt") + okBox("img-" + s.id, "Approved") + "</div></div>";
+  const cutRow = c => {
+    cutNo++;
+    const n = '<span class="n">' + String(cutNo).padStart(2, "0") + "</span>";
+    if (c.edit) {
+      return '<li>' + n + '<span class="cid">' + esc(c.id) + '</span><div class="what"><div class="row"><span class="chip edit">' + (c.graphic ? "I build this" : "Edit only") + "</span></div>" +
+        '<span class="act">' + esc(c.act) + "</span></div><div class=\"ctl\"></div></li>";
+    }
+    const sp = c.line ? '<span class="line"><b>' + esc(C[c.who].name) + ":</b> " + esc(c.line) + "</span>" : '<span class="line"><b>Silent.</b></span>';
+    return '<li data-card="clip-' + c.id + '">' + n + '<span class="cid">' + esc(c.id) + '</span><div class="what">' + sp +
+      '<span class="act">From still ' + esc(c.still) + (c.end ? " to " + esc(c.end) : "") + " · " + P.clipLength(c) + "s · " + esc(c.act) + (c.note ? " " + esc(c.note) : "") + "</span>" +
+      promptBox("clip-" + c.id) + '</div><div class="ctl">' + copyBtn("clip-" + c.id, "Copy Flow prompt", "flow") + okBox("clip-" + c.id, "Approved") + "</div></li>";
+  };
+  const scenes =
+    '<section id="scenes"><h2>The stripboard</h2>' +
+    '<p class="lede">Twelve scenes in story order. Each still is one camera setup; some setups feed two or three clips, the way a real shoot covers a conversation. Only one face talks per clip.</p>' +
+    '<div class="legend" aria-label="Strip colors"><span class="ext-day">Ext · Day</span><span class="int-day">Int · Day</span><span class="int-night">Int · Night</span><span class="ext-night">Ext · Night</span></div>' +
+    B.scenes.map(sc =>
+      '<div class="scene" id="scene-' + sc.n + '">' +
+      '<div class="strip ' + sc.strip + '"><span class="num">' + String(sc.n).padStart(2, "0") + '</span><div><div class="ttl">' + esc(sc.title) + '</div><div class="meta">' + STRIP[sc.strip] + " · " + esc(sc.when) + '</div></div><span class="tc">' + esc(sc.tc) + "<br>" + sc.stills.length + " stills · " + sc.cut.filter(c => !c.edit).length + " clips</span></div>" +
+      '<span class="sub">Stills for ChatGPT</span><div class="grid">' + sc.stills.map(stillCard).join("") + "</div>" +
+      '<span class="sub">Cut order for Flow</span><ol class="cuts">' + sc.cut.map(cutRow).join("") + "</ol></div>"
+    ).join("") + "</section>";
+
+  // ----- beats -----
+  const cue = (id, name, when, feel, len) =>
+    '<div class="card"><div class="card-top"><span class="sid">' + id + '</span><span class="chip">' + esc(when) + "</span></div><p class=\"who\">" + esc(name) + "</p><p>" + esc(feel) + '</p><p class="mono" style="font-size:13px">' + esc(len) + "</p></div>";
+  const beats =
+    '<section id="beats"><h2>Beats I need from you</h2>' +
+    '<p class="lede">Your music solves the rights problem outright: your bible bans commercial samples and recognizable songs, and these are yours. Three cues cover the episode.</p><div class="cues">' +
+    cue("A", "Day", "Scenes 1–7 · 0:00–1:40", "Warm and laid-back. School morning into the grill. Leave the middle open so dialogue sits on top; no lead melody fighting the voices.", "About 1:45 long") +
+    cue("B", "Night", "Scenes 8–11 · 1:40–2:38", "Dark, sparse, sub-heavy. I pull it down to almost nothing at the fangs, then bring it back under the confrontation.", "About 1:05 long") +
+    cue("C", "Sting", "Scene 12 · the red eyes", "One hit for the eye flash, right before the cut to black.", "A hit with a 2–3 second tail") +
+    "</div><p class=\"lede\">Instrumental WAV if you have it, 320 MP3 if not. Only sounds you own. Stems (drums, bass, melody) let me duck the beat under the lines cleanly.</p></section>";
+
+  // ----- budget -----
+  const num = n => n.toLocaleString("en-US");
+  const mix = spoken * 10 + silent * 20;
+  const budget =
+    '<section id="budget"><h2>What it costs in Flow credits</h2>' +
+    '<div class="tablewrap"><table><thead><tr><th>Batch</th><th class="num">Clips</th><th class="num">Veo 3.1 Lite</th><th class="num">Veo 3.1 Fast</th></tr></thead><tbody>' +
+    "<tr><td>Tonight's test</td><td class=\"num\">3</td><td class=\"num\">30</td><td class=\"num\">60</td></tr>" +
+    "<tr><td>Whole episode, one take each</td><td class=\"num\">" + veo.length + '</td><td class="num">' + num(veo.length * 10) + '</td><td class="num">' + num(veo.length * 20) + "</td></tr>" +
+    "<tr><td>Whole episode with retries (×1.5)</td><td class=\"num\">" + Math.round(veo.length * 1.5) + '</td><td class="num">' + num(veo.length * 15) + '</td><td class="num">' + num(veo.length * 30) + "</td></tr>" +
+    "<tr><td>My plan: " + spoken + " talking clips on Lite, " + silent + " silent hero shots on Fast, with retries</td><td class=\"num\">" + Math.round(veo.length * 1.5) + '</td><td class="num" colspan="2">' + num(Math.round(mix * 1.5)) + " credits</td></tr>" +
+    "</tbody></table></div>" +
+    '<p class="lede">Google AI Pro includes 1,000 credits a month plus 50 a day, so my plan fits inside one month if Lite passes the test. That is an assumption until I see the three clips: if Lite cannot hold a face, the episode runs on Fast and spills into a second month or a credit top-up. ChatGPT images have no posted count on Plus, but it slows you down in bursts, so expect the ' + imagesTotal + " images to take a few sittings.</p></section>";
+
+  // ----- calls -----
+  const call = (t, body, opts) => '<div class="card"><h3>' + esc(t) + "</h3><p>" + esc(body) + "</p><ol>" + opts.map(o => "<li>" + esc(o) + "</li>").join("") + "</ol></div>";
+  const calls =
+    '<section id="calls"><h2>Three calls that are yours</h2><div class="calls">' +
+    call("1 · Voices", "Your style bible wants one recorded voice per character, lip-synced. None of your four subscriptions lip-syncs to a supplied voice track. For the test I let Veo speak each line, with the same voice description pasted every time.",
+      ["Veo voices for the test; judge the drift when we hear it (my pick).", "Hold the bible's rule now: add a voice and lip-sync tool before any talking clip gets made."]) +
+    call("2 · Open on the chat", "The show is called The Vampire Group Chat, but in V7 the chat first appears at 2:06. A three-second chat bubble before scene 1 costs no credits, because I build it in the edit, and gives the first seconds a hook.",
+      ["Add a cold-open chat bubble; ChatGPT pitches the line (my pick).", "Keep V7 exactly as written."]) +
+    call("3 · Your Google plan", "The credit math above assumes Google AI Pro. Tell me which one you pay for and I will redo the budget.",
+      ["AI Pro, $19.99.", "AI Plus, $4.99.", "Ultra.", "Not sure. I will check."]) +
+    "</div>" +
+    '<h3>Calls I already made</h3><ul class="made">' +
+    "<li>Two-person moments are shot over the shoulder, so only one mouth is on camera. That is the fix for the swapped voices in the old clip 5.</li>" +
+    "<li>Signs, phone screens and the group chat are blank in every still. I add the words in the edit.</li>" +
+    "<li>Four moments need no video credits: the two storefront shots, the phone on the asphalt, and the chat graphic.</li>" +
+    "<li>Daymondre's vampire face is an edit of his own approved close-up, so the face under the fangs cannot change.</li>" +
+    "<li>I added one silent beat in scene 12: Daymondre turns cold for two seconds before the AP History joke. Your continuity notes ask for that; the script did not have a shot for it. The script's red-eye flash still ends the episode.</li>" +
+    "<li>Marquell's line in scene 9 is split so he shouts \"Vee!\" at the door and says the rest crouched beside her.</li>" +
+    "<li>None of the V6 footage is used. Your continuity notes mark it as scratch.</li>" +
+    "</ul></section>";
+
+  document.getElementById("app").innerHTML = slate + jump + test + cast + team + looks + scenes + beats + budget + calls;
+
+  // ----- behavior -----
+  const toast = document.getElementById("toast");
+  let toastTimer;
+  const say = m => { toast.textContent = m; toast.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove("show"), 2200); };
+
+  function revealAndSelect(key) {
+    const d = document.getElementById("d-" + key), pre = document.getElementById("t-" + key);
+    if (!d || !pre) return;
+    d.open = true;
+    const r = document.createRange(); r.selectNodeContents(pre);
+    const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    pre.scrollIntoView({ block: "center" });
+  }
+  function flash(btn) { btn.classList.add("done"); const t = btn.textContent; btn.textContent = "Copied"; setTimeout(() => { btn.classList.remove("done"); btn.textContent = t; }, 1400); }
+
+  function refresh() {
+    const img = Object.keys(ticks).filter(k => ticks[k] && k.indexOf("img-") === 0).length;
+    const clip = Object.keys(ticks).filter(k => ticks[k] && k.indexOf("clip-") === 0).length;
+    document.getElementById("m-img").textContent = img + " / " + imagesTotal;
+    document.getElementById("m-clip").textContent = clip + " / " + veo.length;
+    document.getElementById("b-img").style.width = (100 * img / imagesTotal) + "%";
+    document.getElementById("b-clip").style.width = (100 * clip / veo.length) + "%";
+    document.querySelectorAll("[data-card]").forEach(el => {
+      const k = el.getAttribute("data-card").replace(/^sheet-/, "img-sheet-").replace(/^(plate|still)-/, "img-");
+      el.classList.toggle("is-ok", !!ticks[k]);
+    });
+  }
+
+  document.addEventListener("click", e => {
+    const cb = e.target.closest("[data-copy]");
+    if (cb) {
+      const key = cb.getAttribute("data-copy"), text = TEXT[key];
+      let p;
+      try { p = navigator.clipboard.writeText(text); } catch (err) { p = Promise.reject(err); }
+      p.then(() => { flash(cb); say("Copied. Paste it into " + (key.indexOf("clip-") === 0 ? "Flow." : "ChatGPT.")); })
+        .catch(() => { revealAndSelect(key); say("Copy is blocked here. The prompt is selected: press Ctrl+C or Cmd+C."); });
+      return;
+    }
+    const jb = e.target.closest("[data-jump]");
+    if (jb) { const t = document.getElementById(jb.getAttribute("data-jump")); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  });
+  document.addEventListener("change", e => {
+    const k = e.target.getAttribute && e.target.getAttribute("data-ok");
+    if (!k) return;
+    ticks[k] = e.target.checked; save(); refresh();
+  });
+  refresh();
+})();
+
+</script>
+</body>
+</html>
