@@ -260,7 +260,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L4, Creekside Grill interior. Match the approved plate exactly.
 IN FRAME:
-- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.
+- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.
 FRAMING: Medium close-up, 50mm look. Vanesha at the far end of the counter by the kitchen pass, an order ticket in her hand.
 MOMENT: Busy, eyes on the ticket.
 RULES:
@@ -377,7 +377,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L4, Creekside Grill interior. Match the approved plate exactly. Evening version of plate L4: windows dark blue outside, fewer diners, the amber lights feel warmer.
 IN FRAME:
-- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.
+- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.
 FRAMING: Medium shot, 35mm look. Vanesha by the side door at the right end of the counter.
 MOMENT: Bag on her shoulder, keys in hand, one hand on the door.
 RULES:
@@ -415,7 +415,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L5, Side parking lot, just after dark. Match the approved plate exactly.
 IN FRAME:
-- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.
+- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.
 FRAMING: Wide shot, 35mm look. Vanesha walking from the side door toward the dark-gray sedan under the lot lamp, small in the frame, seen from behind.
 MOMENT: Alone. Digging in her bag for keys.
 RULES:
@@ -452,7 +452,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L5, Side parking lot, just after dark. Match the approved plate exactly.
 IN FRAME:
-- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.
+- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.
 FRAMING: Medium close-up, 50mm look. Vanesha at the driver door, keys in one hand and phone in the other, turned toward camera-right.
 MOMENT: Irritated, not scared.
 RULES:
@@ -558,7 +558,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L5, Side parking lot, just after dark. Match the approved plate exactly.
 IN FRAME:
-- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.
+- Vanesha: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.
 FRAMING: Medium close-up, 50mm look. Vanesha sitting on the asphalt against the driver door of the sedan.
 MOMENT: Conscious and shaken, one hand at her collar. No wound, no blood.
 RULES:

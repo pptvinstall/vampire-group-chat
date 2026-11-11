@@ -31,7 +31,7 @@ const BOARD = {
     },
     V: {
       name: "Vanesha",
-      look: "Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.",
+      look: "Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.",
       voice: "confident adult Latina, quick and warm, direct, a little vulnerability under the bravado"
     }
   },

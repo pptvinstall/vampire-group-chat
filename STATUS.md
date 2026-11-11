@@ -4,7 +4,7 @@ Last updated: November 10, 2026
 
 ## Where we are
 
-Step 1 of the 3-shot test: making the six cast sheets in ChatGPT, one character at a time.
+The cast is locked: all six sheets are approved. Next in the 3-shot test: the three location plates.
 
 | Step | State |
 |---|---|
@@ -13,15 +13,15 @@ Step 1 of the 3-shot test: making the six cast sheets in ChatGPT, one character 
 | Cast sheet 3, Eiesha | approved by JWood, Nov 10 |
 | Cast sheet 4, Bianca | approved by JWood, Nov 10 |
 | Cast sheet 5, Marquell | approved, Nov 10 (second version, restyled to match the cast) |
-| Cast sheet 6, Vanesha | in progress |
-| Plates L2, L4, L5 | todo |
+| Cast sheet 6, Vanesha | approved by JWood, Nov 10 |
+| Plates L2, L4, L5 | in progress |
 | Test stills 02D, 05B, 08C | todo |
 | Test clips 02D-1, 05B-1, 08C-1 in Flow | todo |
 | Remaining plates, stills and clips | todo, waits on the test |
 | Music cues A, B, C from JWood | todo |
 | Edit | todo |
 
-Approved so far: the Daymondre, Stefon, Eiesha, Bianca and Marquell cast sheets in `01_cast/approved_sheets/`. Daymondre sets the look for the whole cast.
+Approved so far: all six cast sheets in `01_cast/approved_sheets/`. Daymondre sets the look for the whole cast.
 
 ## Decisions
 

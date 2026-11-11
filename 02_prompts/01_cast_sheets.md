@@ -157,7 +157,7 @@ ATTACHED: Vanesha_V9_sheet.png (old reference for Vanesha), plus the approved ne
 Use the old reference for identity only: face shape, features, skin tone, hair and build. Redraw Vanesha in our locked look: Grounded, expressive, cinematic stylized 3D animation. Soft geometric faces, expressive eyes, smooth but real skin shading, believable fabric. Not photoreal, not live-action, not anime, not flat illustration.
 Match the approved Daymondre sheet exactly for rendering style, skin shading, eye size and body proportions, so the cast looks like one show. Different person, same show.
 
-WHO: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down the sleeve, dark top, wide-leg dark jeans.
+WHO: Latina woman, Marquell's older sister, long side-parted dark waves, gold hoop earrings, freckles, black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, dark boots.
 OUTFIT (the only one, worn all episode): Black jacket with an ivory stripe down each sleeve, dark top, wide-leg dark jeans, gold hoop earrings.
 
 LAYOUT: one landscape 3:2 image on a plain mid-gray studio background.
