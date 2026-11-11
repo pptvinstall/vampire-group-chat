@@ -13,7 +13,7 @@ Status values: todo, made, approved, redo.
 | 5 | 2 | 02A-1 | 02A | Flow clip | silent — He walks toward camera and adjusts his glasses once, eyes scanning the hall. | 4s | todo |
 | 6 | 2 | 02B-1 | 02B | Flow clip | Eiesha: Who's the new guy? | 4s | todo |
 | 7 | 2 | 02C-1 | 02C | Flow clip | Bianca: No idea. But the waves, the glasses? He look like he got a 4.0 and a secret. | 8s | todo |
-| 8 | 2 | 02D-1 | 02D | Flow clip | Stefon: I can hear you. | 4s | todo |
+| 8 | 2 | 02D-1 | 02D | Flow clip | Stefon: I can hear you. | 4s | approved |
 | 9 | 2 | 02C-2 | 02C | Flow clip | Bianca: Congratulations. Can you blink? | 4s | todo |
 | 10 | 3 | 03A-1 | 03A | Flow clip | silent — The phone slips and drops out of the bottom of the frame. The hand reacts a beat late. | 4s | todo |
 | 11 | 3 | 03B-1 | 03B | Flow clip | Eiesha: How'd you get over here so fast? | 6s | todo |
@@ -29,7 +29,7 @@ Status values: todo, made, approved, redo.
 | 21 | 4 | 04B-3 | 04B | Flow clip | Marquell: I'm going! | 4s | todo |
 | 22 | 5 | 05A-1 | 05A | Flow clip | Daymondre: Look at my little brother. First day in the suburbs, already got a table. | 8s | todo |
 | 23 | 5 | 05C-1 | 05C | Flow clip | Stefon: What are you doing here? | 4s | todo |
-| 24 | 5 | 05B-1 | 05B | Flow clip | Daymondre: Looking for lemon-pepper wet. And seeing how long you can pretend to be normal. | 8s | todo |
+| 24 | 5 | 05B-1 | 05B | Flow clip | Daymondre: Looking for lemon-pepper wet. And seeing how long you can pretend to be normal. | 8s | made, needs JWood's ear |
 | 25 | 6 | 06A-1 | 06A | Flow clip | Eiesha: That's your brother? | 4s | todo |
 | 26 | 6 | 05C-2 | 05C | Flow clip | Stefon: Unfortunately. | 4s | todo |
 | 27 | 6 | 06B-1 | 06B | Flow clip | Bianca: Mhm. One look like honor roll, the other like Buckhead security knows him by name. | 8s | todo |
@@ -40,7 +40,7 @@ Status values: todo, made, approved, redo.
 | 32 | 7 | 07C-2 | 07C | Flow clip | Marquell: And I'm still asking. | 4s | todo |
 | 33 | 8 | 08A-1 | 08A | Flow clip | silent — She walks to the car digging for her keys. No one else is visible. | 4s | todo |
 | 34 | 8 | 08B-1 | 08B | Flow clip | Daymondre: Need a ride? | 4s | todo |
-| 35 | 8 | 08C-1 | 08C | Flow clip | Vanesha: Need you to stop sneaking up on people. | 6s | todo |
+| 35 | 8 | 08C-1 | 08C | Flow clip | Vanesha: Need you to stop sneaking up on people. | 6s | made, retry for props |
 | 36 | 8 | 08D-1 | 08D | Flow clip | silent — His irises shift from brown to red-amber, faint dark veins rise under both eyes, and his lips part to show two small fangs. Hold on the changed face. Same face shape throughout. No blood. | 4s | todo |
 | 37 | 8 | 08E | 08E | edit only | Hard cut to the phone on the asphalt with an impact sound and a small camera jolt. Vanesha's gasp plays over the cut. No contact shown. |  | todo |
 | 38 | 9 | 09A-1 | 09A | Flow clip | Marquell: Vee! | 4s | todo |

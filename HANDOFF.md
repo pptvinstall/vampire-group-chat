@@ -142,7 +142,7 @@ WAV preferred, stems if he has them. Only sounds he owns.
 
 ## Things that are easy to get wrong
 
-- `node board/gen_md.js` rewrites `03_ep01/SHOT_LIST.md` and resets its status column to "todo". Re-apply statuses from `STATUS.md` afterward.
+- `node board/gen_md.js` rewrites `02_prompts/*.md` and `03_ep01/SHOT_LIST.md`. It keeps the status column, so record statuses there by clip ID.
 - The old references in `01_cast/old_refs/` are in three different rendering styles. Use them for identity only; the approved sheets are the standard.
 - This repo is public. Two documents were left out on purpose: the master production bible (it has an internal table mapping the cast to the show being parodied) and a price guide to video generators (it has account notes). JWood has both.
 - First names only, everywhere. No surnames in prompts, file names or on-screen text.

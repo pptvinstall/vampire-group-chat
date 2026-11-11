@@ -54,5 +54,5 @@ Edit `board/data.js`, then run:
 ```
 node board/check.js   # confirms every script line is covered once and every clip has a still
 node board/build.js   # rebuilds board/index.html
-node board/gen_md.js  # regenerates 02_prompts/*.md and 03_ep01/SHOT_LIST.md (resets the status column; re-apply statuses from STATUS.md)
+node board/gen_md.js  # regenerates 02_prompts/*.md and 03_ep01/SHOT_LIST.md (keeps the status column)
 ```
