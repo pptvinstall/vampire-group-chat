@@ -14,7 +14,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 LOCATION: plate L1, School exterior, morning. Match the approved plate exactly.
 IN FRAME:
 - Eiesha: Black teen girl, warm brown eyes, long neat braids with gold cuffs, burgundy-and-mustard sweater, light denim jeans, white sneakers. Guarded, dry, quick-witted.
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Wide shot, 35mm look, camera behind and slightly to one side. Both girls seen from behind at a three-quarter angle, walking toward the entrance, small in the frame.
 MOMENT: Eiesha on the left with a backpack, Bianca on the right. Faces mostly turned away from camera.
 RULES:
@@ -50,7 +50,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L1, School exterior, morning. Match the approved plate exactly.
 IN FRAME:
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Medium close-up, 50mm look, Bianca walking toward camera, matching reverse of STILL 01B.
 MOMENT: Glancing sideways toward Eiesha off-frame. Warm and matter-of-fact.
 RULES:
@@ -107,7 +107,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L2, School hallway, morning. Match the approved plate exactly.
 IN FRAME:
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Medium close-up, 50mm look. Bianca leaning against the lockers, arms crossed, looking past camera down the hall.
 MOMENT: Eyes narrowed, studying someone.
 RULES:
@@ -204,7 +204,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L2, School hallway, morning. Match the approved plate exactly.
 IN FRAME:
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Tight close-up, 85mm look. Bianca at the lockers.
 MOMENT: Side-eye toward the two of them off-frame.
 RULES:
@@ -357,7 +357,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L4, Creekside Grill interior. Match the approved plate exactly.
 IN FRAME:
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Medium close-up, 50mm look. Bianca in the booth beside Eiesha, a drink in her hand.
 MOMENT: Watching, unbothered.
 RULES:
@@ -596,7 +596,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L4, Creekside Grill interior. Match the approved plate exactly. Evening version of plate L4: windows dark blue outside, nearly empty, amber lights.
 IN FRAME:
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Medium close-up, 50mm look. Bianca in the booth, phone lowered from her ear, looking toward the back of the grill.
 MOMENT: Quiet and certain.
 RULES:
@@ -678,7 +678,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 LOCATION: plate L6, Back service exit, night. Match the approved plate exactly.
 IN FRAME:
 - Eiesha: Black teen girl, warm brown eyes, long neat braids with gold cuffs, burgundy-and-mustard sweater, light denim jeans, white sneakers. Guarded, dry, quick-witted.
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 FRAMING: Medium two-shot, 35mm look. Eiesha and Bianca coming around the brick corner at frame left.
 MOMENT: Stopped mid-step. Both staring at something off-frame right.
 RULES:
@@ -733,7 +733,7 @@ Style: same locked look as the kickoff. Grounded, expressive, cinematic stylized
 
 LOCATION: plate L6, Back service exit, night. Match the approved plate exactly.
 IN FRAME:
-- Bianca: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+- Bianca: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 - Eiesha, back to camera: we see only her braids and the shoulder of her sweater at the edge of frame. No face.
 FRAMING: Medium close-up, 50mm look. Bianca just behind Eiesha's shoulder.
 MOMENT: Already backing away, one hand on Eiesha's sleeve, eyes locked off-frame right.

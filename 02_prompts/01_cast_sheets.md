@@ -101,7 +101,7 @@ ATTACHED: Bianca_V9_sheet.png (old reference for Bianca), plus the approved new 
 Use the old reference for identity only: face shape, features, skin tone, hair and build. Redraw Bianca in our locked look: Grounded, expressive, cinematic stylized 3D animation. Soft geometric faces, expressive eyes, smooth but real skin shading, believable fabric. Not photoreal, not live-action, not anime, not flat illustration.
 Match the approved Daymondre sheet exactly for rendering style, skin shading, eye size and body proportions, so the cast looks like one show. Different person, same show.
 
-WHO: East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.
+WHO: East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.
 OUTFIT (the only one, worn all episode): Olive jacket over a dark top, crystal pendant necklace, dark cargo pants, white sneakers. Long dark hair with purple highlights.
 
 LAYOUT: one landscape 3:2 image on a plain mid-gray studio background.

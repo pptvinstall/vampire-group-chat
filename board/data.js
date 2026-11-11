@@ -9,7 +9,7 @@ const BOARD = {
     },
     B: {
       name: "Bianca",
-      look: "East Asian-American teen girl, long dark hair with purple highlights, olive jacket, crystal pendant necklace, alert expressive eyes.",
+      look: "East Asian-American teen girl, long wavy dark hair worn down with purple highlights, olive jacket over a dark top, crystal pendant necklace, small gold hoop earrings, dark cargo pants, white sneakers, alert expressive eyes.",
       voice: "Atlanta-raised young woman, quick understated sarcasm, concern under the jokes, no put-on accent"
     },
     S: {
