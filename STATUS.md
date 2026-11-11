@@ -9,8 +9,9 @@ Step 1 of the 3-shot test: making the six cast sheets in ChatGPT, one character 
 | Step | State |
 |---|---|
 | Cast sheet 1, Daymondre (style anchor) | approved by JWood, Nov 10 |
-| Cast sheet 2, Stefon | in progress |
-| Cast sheets 3–6: Eiesha, Bianca, Marquell, Vanesha | todo |
+| Cast sheet 2, Stefon | approved by JWood, Nov 10 |
+| Cast sheet 3, Eiesha | in progress |
+| Cast sheets 4–6: Bianca, Marquell, Vanesha | todo |
 | Plates L2, L4, L5 | todo |
 | Test stills 02D, 05B, 08C | todo |
 | Test clips 02D-1, 05B-1, 08C-1 in Flow | todo |
@@ -18,7 +19,7 @@ Step 1 of the 3-shot test: making the six cast sheets in ChatGPT, one character 
 | Music cues A, B, C from JWood | todo |
 | Edit | todo |
 
-Approved so far: the Daymondre cast sheet (`01_cast/approved_sheets/Daymondre_sheet.png`). It sets the look for the whole cast.
+Approved so far: the Daymondre and Stefon cast sheets in `01_cast/approved_sheets/`. Daymondre sets the look for the whole cast.
 
 ## Decisions
 
