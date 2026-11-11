@@ -709,12 +709,13 @@ function clipPrompt(B, c) {
   const p = plateById(B, s.plate);
   const lines = [
     "CLIP " + c.id + " — start frame: STILL " + c.still + (c.end ? ". Last frame, if Flow offers one: STILL " + c.end : "") + ".",
-    "Vertical 9:16. One continuous shot, no cuts. Length: " + clipLength(c) + " seconds.",
+    "Use Omni 1.2 Flash. Vertical 9:16. One continuous shot, no cuts. Length: " + clipLength(c) + " seconds.",
+    "This is an original stylized 3D animated cartoon character from my own series, not a real person.",
     "",
-    "THE VAMPIRE GROUP CHAT. Premium expressive stylized 3D animation that matches the start frame exactly: same face, hair, skin tone, wardrobe, set and lighting from first frame to last. Natural, restrained acting. No morphing, no new characters, no outfit changes, no captions, no subtitles, no on-screen text.",
+    "THE VAMPIRE GROUP CHAT. Premium expressive stylized 3D animation that matches the start frame exactly: same face, hair, skin tone, wardrobe, set and lighting from first frame to last. Natural, restrained acting. Anything held in a hand stays in that same hand. No morphing, no new characters, no outfit changes, no captions, no subtitles, no on-screen text.",
     "",
     "ACTION: " + c.act,
-    "CAMERA: " + (c.cam || "Hold the start frame's framing. At most a very slow push-in.")
+    "CAMERA: " + (c.cam || "Locked camera. Hold the start frame's framing. No zoom, no push-in.")
   ];
   if (c.line) {
     const ch = C[c.who];
