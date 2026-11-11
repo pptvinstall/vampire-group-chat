@@ -34,6 +34,7 @@ JWood is the showrunner and has final say on everything. Nothing is approved unt
 | `04_music/` | JWood's cues: A (day), B (night), C (sting). |
 | `board/` | Source for the interactive shot board. `data.js` holds the shot breakdown; the prompt files are generated from it. |
 | `STATUS.md` | Where the production stands and the decisions made so far. |
+| `HANDOFF.md` | Full handoff notes: what is done, what was learned, and the next steps in order. Start here. |
 
 ## Rules for anyone, human or AI, working here
 
@@ -53,4 +54,5 @@ Edit `board/data.js`, then run:
 ```
 node board/check.js   # confirms every script line is covered once and every clip has a still
 node board/build.js   # rebuilds board/index.html
+node board/gen_md.js  # regenerates 02_prompts/*.md and 03_ep01/SHOT_LIST.md (resets the status column; re-apply statuses from STATUS.md)
 ```
