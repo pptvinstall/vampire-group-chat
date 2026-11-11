@@ -4,7 +4,7 @@ Last updated: November 10, 2026
 
 ## Where we are
 
-The cast is locked: all six sheets are approved. The three test plates and three test stills are approved. Next: animate 02D, 05B and 08C in Google Flow.
+The cast, all seven location plates, and all scene-1 through scene-11 stills are approved, including transformation endpoint 08V. Next: finish the still package with scene 12, starting at 12A.
 
 | Step | State |
 |---|---|
@@ -14,12 +14,24 @@ The cast is locked: all six sheets are approved. The three test plates and three
 | Cast sheet 4, Bianca | approved by JWood, Nov 10 |
 | Cast sheet 5, Marquell | approved, Nov 10 (second version, restyled to match the cast) |
 | Cast sheet 6, Vanesha | approved by JWood, Nov 10 |
-| Plates L2, L4, L5 | approved, Nov 10 (in `03_ep01/plates/`) |
+| Plates L1, L2, L3, L3D, L4, L5, L6 | approved, Nov 10 (in `03_ep01/plates/`) |
 | Test stills 02D, 05B, 08C | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 1 stills 01A, 01B, 01C | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 2 stills 02A, 02B, 02C, 02D | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 3 stills 03A, 03B, 03C, 03D | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 4 stills 04B, 04C, 04D | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 5 stills 05A, 05B, 05C | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 6 stills 06A, 06B | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 7 stills 07B, 07C | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 8 stills 08A, 08B, 08C, 08D, 08V, 08E | approved, Nov 10 (in `03_ep01/stills/`) |
+| Scene 9 stills 09A, 09B, 09C | approved, Nov 11 (in `03_ep01/stills/`) |
+| Scene 10 stills 10B, 10C | approved, Nov 11 (in `03_ep01/stills/`) |
+| Scene 11 stills 11A, 11B, 11C | approved, Nov 11 (in `03_ep01/stills/`) |
 | Test clip 02D-1 (Stefon) | approved by JWood: face holds, line and voice right (Omni 1.2 Flash, 4s) |
 | Test clip 05B-1 (Daymondre) | made, 8s: face and outfit hold, low voice; camera pushes in more than asked; needs JWood's ear |
 | Test clip 08C-1 (Vanesha) | made, 6s: face and outfit hold; keys and phone change hands mid-clip; retry with fixed props suggested |
-| Remaining plates, stills and clips | todo, waits on the test |
+| Remaining stills | 4 todo |
+| Remaining clips | 49 todo |
 | Music cues A, B, C from JWood | todo |
 | Edit | todo |
 
