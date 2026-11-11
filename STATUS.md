@@ -4,7 +4,7 @@ Last updated: November 10, 2026
 
 ## Where we are
 
-The cast is locked: all six sheets are approved. Next in the 3-shot test: the three location plates.
+The cast is locked: all six sheets are approved. The three test plates are approved. Next in the 3-shot test: stills 02D, 05B and 08C.
 
 | Step | State |
 |---|---|
@@ -14,8 +14,8 @@ The cast is locked: all six sheets are approved. Next in the 3-shot test: the th
 | Cast sheet 4, Bianca | approved by JWood, Nov 10 |
 | Cast sheet 5, Marquell | approved, Nov 10 (second version, restyled to match the cast) |
 | Cast sheet 6, Vanesha | approved by JWood, Nov 10 |
-| Plates L2, L4, L5 | in progress |
-| Test stills 02D, 05B, 08C | todo |
+| Plates L2, L4, L5 | approved, Nov 10 (in `03_ep01/plates/`) |
+| Test stills 02D, 05B, 08C | in progress |
 | Test clips 02D-1, 05B-1, 08C-1 in Flow | todo |
 | Remaining plates, stills and clips | todo, waits on the test |
 | Music cues A, B, C from JWood | todo |
