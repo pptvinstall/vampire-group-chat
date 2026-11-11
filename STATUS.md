@@ -12,7 +12,7 @@ Step 1 of the 3-shot test: making the six cast sheets in ChatGPT, one character 
 | Cast sheet 2, Stefon | approved by JWood, Nov 10 |
 | Cast sheet 3, Eiesha | approved by JWood, Nov 10 |
 | Cast sheet 4, Bianca | approved by JWood, Nov 10 |
-| Cast sheet 5, Marquell | approved by JWood, Nov 10 (slightly more realistic than the others; watch in the test stills) |
+| Cast sheet 5, Marquell | approved, Nov 10 (second version, restyled to match the cast) |
 | Cast sheet 6, Vanesha | in progress |
 | Plates L2, L4, L5 | todo |
 | Test stills 02D, 05B, 08C | todo |
